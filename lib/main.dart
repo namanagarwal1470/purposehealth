@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:purposehealth/screens/onboard/login.dart';
 import "package:purposehealth/screens/onboard/splashscreen.dart";
 import "package:purposehealth/screens/onboard/signup.dart";
 
@@ -11,6 +12,6 @@ class myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Signup());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: splash());
   }
 }
