@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:purposehealth/screens/onboard/insurancedetails.dart';
+import 'package:purposehealth/screens/onboard/login.dart';
 
 class Signup extends StatefulWidget {
   Signup({Key? key}) : super(key: key);
@@ -293,7 +295,13 @@ class _SignupState extends State<Signup> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Insurancedetails()),
+                    );
+                  },
                   child: Container(
                     height: h_factor * 40,
                     width: w_factor * 312,
@@ -314,7 +322,13 @@ class _SignupState extends State<Signup> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Insurancedetails()),
+                    );
+                  },
                   child: Container(
                     height: h_factor * 39,
                     width: w_factor * 312,
@@ -336,7 +350,13 @@ class _SignupState extends State<Signup> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Insurancedetails()),
+                    );
+                  },
                   child: Container(
                     height: h_factor * 39,
                     width: w_factor * 312,
@@ -357,9 +377,17 @@ class _SignupState extends State<Signup> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                  margin: EdgeInsets.only(top: h_factor * 8),
-                  child: Text("Already have an account? Login"))
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => loginpage()),
+                      (Route<dynamic> route) => false);
+                },
+                child: Container(
+                    margin: EdgeInsets.only(top: h_factor * 8),
+                    child: Text("Already have an account? Login")),
+              )
             ],
           )
         ],

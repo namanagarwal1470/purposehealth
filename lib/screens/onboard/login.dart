@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import 'package:purposehealth/screens/onboard/insurancedetails.dart';
+import 'package:purposehealth/screens/onboard/signup.dart';
 
 class loginpage extends StatefulWidget {
   loginpage({Key? key}) : super(key: key);
@@ -105,7 +107,12 @@ class _loginpageState extends State<loginpage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Insurancedetails()),
+                  );
+                },
                 child: Container(
                   height: h_factor * 39,
                   width: w_factor * 312,
@@ -127,7 +134,12 @@ class _loginpageState extends State<loginpage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Insurancedetails()),
+                  );
+                },
                 child: Container(
                   height: h_factor * 39,
                   width: w_factor * 312,
@@ -148,9 +160,17 @@ class _loginpageState extends State<loginpage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-                margin: EdgeInsets.only(top: h_factor * 8),
-                child: Text("Dont have an account? Signup"))
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Signup()),
+                );
+              },
+              child: Container(
+                  margin: EdgeInsets.only(top: h_factor * 8),
+                  child: Text("Dont have an account? Signup")),
+            )
           ],
         )
       ],
